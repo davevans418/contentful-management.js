@@ -48,7 +48,7 @@ export function getTestOrganizationId() {
 
 export async function getTestOrganization() {
   const testOrgId = getTestOrganizationId()
-  const organizations = await initClient().getOrganizations()
+  const organizations = initClient().getOrganizations()
   return organizations.items.find(({ sys: { id } }) => id === testOrgId)
 }
 
