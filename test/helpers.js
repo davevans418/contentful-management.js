@@ -53,8 +53,8 @@ export async function getTestOrganization() {
 }
 
 export async function getTestUser() {
-  const { userId } = TestDefaults
-  //const organization = getTestOrganization()
+  //const { userId } = TestDefaults
+  const organization = getTestOrganization()
   return organization.getUser(userId)
 }
 
